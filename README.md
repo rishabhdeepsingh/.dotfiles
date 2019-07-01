@@ -23,11 +23,11 @@
 
 
 ## Themes
-### Git / VIM
+### Git / VIMrc / BASHrc
     git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
-    wget -O .bashrc 'https://gist.githubusercontent.com/rishabhdeepsingh/99f48e4771e3bc4932991ebed2b635a2/raw/2b4ad4b280457c7dc56372347023f1ca9b957ed8/.bashrc'
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    wget -O .vimrc 'https://gist.githubusercontent.com/rishabhdeepsingh/783222e8f0a8bc9b1dd5ad5060f58998/raw/a72c7f1a18be7aa400cc5f820db0651714fdfae9/.vimrc'
+    wget -O .bashrc 'https://github.com/rishabhdeepsingh/dotfiles/blob/master/.bashrc'
+    wget -O .vimrc 'https://github.com/rishabhdeepsingh/dotfiles/blob/master/.vimrc'
 
 ### [X ARch White](https://gitlab.com/LinxGem33/X-Arc-White/tags/v1.4.7)
 
