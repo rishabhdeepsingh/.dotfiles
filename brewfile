@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+brew install nnn # full-featured file manager
+brew install ffmpeg # support for multiple video and audio file formats
+brew install dep # Dependency manager for go
+brew install fd # fd is a simple, fast and user-friendly alternative to find 
+brew install git
+brew install htop # checking processes
+brew install tree # for checking file system
+brew install wget 
+brew install gcc # gcc compiler
+brew install colordiff
+brew install fzf # general-purpose command-line fuzzy finder
+brew install bat # using with fzf
+brew install ack # similar to grep
+brew install node
+brew install python3
