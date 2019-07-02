@@ -6,10 +6,6 @@
     Acquire::http::No-Cache true;
     Acquire::http::Pipeline-Depth 0;
 
-## Chrome, VSCode
-    sudo apt-get update && sudo apt-get upgrade
-
-
 ## Basic Needs ,Geany, Terminator, Git, Maven
     sudo apt-get install git curl maven vim vlc python3-pip terminator geany
 
