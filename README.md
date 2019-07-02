@@ -26,8 +26,8 @@
 ### Git / VIMrc / BASHrc
     git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    wget -O .bashrc 'https://github.com/rishabhdeepsingh/dotfiles/blob/master/.bashrc'
-    wget -O .vimrc 'https://github.com/rishabhdeepsingh/dotfiles/blob/master/.vimrc'
+    curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.bashrc' -o ~/.bashrc
+    curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.vimrc' -o ~/.vimrc
 
 ### [X ARch White](https://gitlab.com/LinxGem33/X-Arc-White/tags/v1.4.7)
 
