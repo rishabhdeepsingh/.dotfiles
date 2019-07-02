@@ -1,0 +1,26 @@
+# enable color support of ls and also add handy aliases
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias gg='git grep -ni'
+alias :q="exit"
+
+# Add an "alert" alias for long running commands.  Use like so:  sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
+# N-Triples aliases from http://blog.datagraph.org/2010/03/grepping-ntriples
+alias rdf-count="awk '/^\s*[^#]/ { n += 1 } END { print n }'"
+alias rdf-lengths="awk '/^\s*[^#]/ { print length }'"
+alias rdf-length-avg="awk '/^\s*[^#]/ { n += 1; s += length } END { print s/n }'"
+alias rdf-length-max="awk 'BEGIN { n=0 } /^\s*[^#]/ { if (length>n) n=length } END { print n }'"
+alias rdf-length-min="awk 'BEGIN { n=1e9 } /^\s*[^#]/ { if (length>0 && length<n) n=length } END { print (n<1e9 ? n : 0) }'"
+alias rdf-subjects="awk '/^\s*[^#]/ { print \$1 }' | uniq"
+alias rdf-predicates="awk '/^\s*[^#]/ { print \$2 }' | uniq"
+alias rdf-objects="awk '/^\s*[^#]/ { ORS=\"\"; for (i=3;i<=NF-1;i++) print \$i \" \"; print \"\n\" }' | uniq"
+alias rdf-datatypes="awk -F'\x5E' '/\"\^\^</ { print substr(\$3, 2, length(\$3)-4) }' | uniq"
