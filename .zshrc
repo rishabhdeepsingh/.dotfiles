@@ -1,3 +1,8 @@
+# History control
+HISTCONTROL=ignoredups:ignorespace
+HISTSIZE=100000
+HISTFILESIZE=2000000
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.dotfiles/.oh-my-zsh"
 
