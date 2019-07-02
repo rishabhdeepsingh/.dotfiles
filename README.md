@@ -28,9 +28,6 @@
 ## Bashrc
     curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.bashrc' -o ~/.bashrc
 
-### Git prompt
-    git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
-
 ### [X ARch White](https://gitlab.com/LinxGem33/X-Arc-White/tags/v1.4.7)
 
 ------
