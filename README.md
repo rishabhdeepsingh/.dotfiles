@@ -1,4 +1,4 @@
-# dotfiles and setup for linux
+# dotfiles and setup for linux and mac
 
 ## Essentials for proxy
     sudo nano /etc/apt/apt.conf
@@ -22,12 +22,15 @@
     sudo snap install android-studio --classic
 
 
-## Themes
-### Git / VIMrc / BASHrc
-    git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
+## Vim
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.bashrc' -o ~/.bashrc
     curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.vimrc' -o ~/.vimrc
+
+## Bashrc
+    curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.bashrc' -o ~/.bashrc
+
+### Git prompt
+    git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 
 ### [X ARch White](https://gitlab.com/LinxGem33/X-Arc-White/tags/v1.4.7)
 
