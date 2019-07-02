@@ -1,5 +1,20 @@
 # Remove .DS_Store files recursively in a directory, default .
-function rmdsstore() {
-	find "${@:-.}" -type f -name .DS_Store -delete
+function rmdsstore() { find "${@:-.}" -type f -name .DS_Store -delete }
+
+# Change up a variable number of directories e.g.
+#   cu   -> cd ../
+#   cu 3 -> cd ../../../
+function cu {
+    local count=$1
+    if [ -z "${count}" ]; then
+        count=1
+    fi
+    local path=""
+    for i in $(seq 1 ${count}); do
+        path="${path}../"
+    done
+    cd $path
 }
 
+# Create a new directory and enter it
+function mkd() { mkdir -p "$@" && cd "$_"; }
