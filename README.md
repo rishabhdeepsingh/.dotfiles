@@ -17,6 +17,9 @@
     sudo snap install intellij-idea-ultimate --classic
     sudo snap install android-studio --classic
 
+## ZSH
+    sudo apt install zsh
+    git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.dotfiles/.oh-my-zsh
 
 ## Vim
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
