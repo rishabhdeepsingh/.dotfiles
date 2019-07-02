@@ -3,8 +3,6 @@ HISTCONTROL=ignoredups:ignorespace
 HISTSIZE=100000
 HISTFILESIZE=2000000
 
-export PATH="$HOME/bin:$PATH";
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
