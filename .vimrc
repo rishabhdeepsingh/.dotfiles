@@ -22,6 +22,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'matchit.zip'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'bash-support.vim'
 
 call vundle#end()
 filetype plugin indent on
