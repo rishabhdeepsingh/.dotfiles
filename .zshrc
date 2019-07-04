@@ -30,4 +30,14 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export EDITOR='vim'
+
+export PATH="$HOME/bin:$PATH";
+
+if [ "$(uname)" == "Darwin" ]; then
+  echo "Mac-OS"
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  echo "Linux"
+  PATH="$PATH:/opt/anaconda3/bin"
+fi
+
 clear
