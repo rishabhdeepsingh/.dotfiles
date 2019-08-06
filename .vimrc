@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'w0rp/ale'
+Plugin 'taglist.vim'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-sensible'
 Plugin 'itchyny/lightline.vim'
@@ -24,13 +25,19 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'bash-support.vim'
 
+" C++
+Plugin 'c.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'OmniCppComplete'
+Plugin 'bfrg/vim-cpp-modern'
+
 call vundle#end()
 filetype plugin indent on
 
 
 syntax on
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
