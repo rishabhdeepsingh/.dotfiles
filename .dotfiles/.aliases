@@ -13,6 +13,10 @@ alias :q="exit"
 alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
 alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
 
+## C++ 17
+alias g++='g++ -O2 -std=c++17 -Wno-unused-result -Wshadow -Wall'
+alias G++='g++ -DLOCAL -std=c++17 -Wshadow -Wall -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG -g'
+
 # Add an "alert" alias for long running commands.  Use like so:  sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
