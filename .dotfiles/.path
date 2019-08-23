@@ -3,5 +3,6 @@ source $HOME/.dotfiles/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Flutter
 export PATH=$PATH:/Library/flutter/bin
 
+export PATH=$PATH:/opt/androidsdk/bin
 export PATH=$PATH:$HOME/Software/anaconda3/bin
 export PATH=$PATH:$HOME/Software/jadx/bin/
