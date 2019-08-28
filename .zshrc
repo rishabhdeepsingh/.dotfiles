@@ -8,8 +8,8 @@ for file in ~/.dotfiles/.{path,bash_prompt,aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-ZSH_THEME="random"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
