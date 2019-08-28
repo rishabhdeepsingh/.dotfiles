@@ -3,9 +3,7 @@ export EDITOR='vim'
 
 # ZSH setup
 export DOTFILES=$HOME/.dotfiles
-export ZSH="$DOTFILES/.oh-my-zsh"
-source $DOTFILES/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH/oh-my-zsh.sh
+export ZSH=$HOME/.dotfiles/.oh-my-zsh
 
 if [ "$(uname)" == "Darwin" ]; then
   echo "Mac-OS"
