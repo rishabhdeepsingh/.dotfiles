@@ -1,8 +1,7 @@
 source $HOME/.dotfiles/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Flutter
 export PATH=$PATH:/Library/flutter/bin
-
+export PATH=$PATH:/opt/go/bin
 export PATH=$PATH:/opt/androidsdk/bin
 export PATH=$PATH:$HOME/Software/platform-tools/bin
-export PATH=$PATH:$HOME/Software/jadx/bin/
+export PATH=$PATH:$HOME/Software/jadx/bin
