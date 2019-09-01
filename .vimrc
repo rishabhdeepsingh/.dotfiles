@@ -47,19 +47,17 @@ set ruler
 set history=7000
 set showcmd
 set wildmenu
-set scrolloff=7
+set scrolloff=32
 set ignorecase
 set smartcase
 set shiftround
 set expandtab
 set noswapfile
 
-"set lbr    
-"set bg=dark
 
 highlight Comment ctermfg=green
 hi Search ctermfg=Red
-"hi Search ctermbg=DarkBlue
+" hi Search ctermbg=DarkBlue
 
 " Set relative numbers
 set number relativenumber
@@ -73,3 +71,28 @@ set numberwidth=4
 
 " Yank file path with line number
 nnoremap <leader>yl :let @+=expand("%") . ':' . line(".")<CR>
+
+" hardmode
+let g:hardmodemsg = "VIM: hard Mode [ ':call EasyMode()' to exit]"
+
+
+nnoremap <buffer> <Left> <Esc>:echo g:hardmodemsg<CR>
+nnoremap <buffer> <Right> <Esc>:echo g:hardmodemsg<CR>
+nnoremap <buffer> <Up> <Esc>:echo g:hardmodemsg<CR>
+nnoremap <buffer> <Down> <Esc>:echo g:hardmodemsg<CR>
+nnoremap <buffer> <PageUp> <Esc>:echo g:hardmodemsg<CR>
+nnoremap <buffer> <PageDown> <Esc>:echo g:hardmodemsg<CR>
+
+inoremap <buffer> <Left> <Esc>:echo g:hardmodemsg<CR>
+inoremap <buffer> <Right> <Esc>:echo g:hardmodemsg<CR>
+inoremap <buffer> <Up> <Esc>:echo g:hardmodemsg<CR>
+inoremap <buffer> <Down> <Esc>:echo g:hardmodemsg<CR>
+inoremap <buffer> <PageUp> <Esc>:echo g:hardmodemsg<CR>
+inoremap <buffer> <PageDown> <Esc>:echo g:hardmodemsg<CR>
+
+vnoremap <buffer> <Left> <Esc>:echo g:hardmodemsg<CR>
+vnoremap <buffer> <Right> <Esc>:echo g:hardmodemsg<CR>
+vnoremap <buffer> <Up> <Esc>:echo g:hardmodemsg<CR>
+vnoremap <buffer> <Down> <Esc>:echo g:hardmodemsg<CR>
+vnoremap <buffer> <PageUp> <Esc>:echo g:hardmodemsg<CR>
+vnoremap <buffer> <PageDown> <Esc>:echo g:hardmodemsg<CR>
