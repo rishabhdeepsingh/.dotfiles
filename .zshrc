@@ -6,8 +6,6 @@ for file in ~/.dotfiles/.{path,bash_prompt,exports,aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
@@ -19,8 +17,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source $DOTFILES/.zplug/init.zsh
-source $ZSH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zplug/init.zsh
 
 # zsh Plugins using zplug 
 zplug "zsh-users/zsh-syntax-highlighting"
@@ -34,10 +31,11 @@ zplug "rawkode/zsh-docker-run"
 zplug "arzzen/calc.plugin.zsh"
 zplug "peterhurford/up.zsh"
 zplug "jimeh/zsh-peco-history"
-  
+zplug romkatv/powerlevel10k, use:powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+zplug load
