@@ -12,7 +12,6 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'google/vim-searchindex'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/rainbow_parentheses.vim'
@@ -28,9 +27,10 @@ Plugin 'bash-support.vim'
 
 " C++
 Plugin 'c.vim'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'OmniCppComplete'
 Plugin 'bfrg/vim-cpp-modern'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()
 filetype plugin indent on
