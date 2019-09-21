@@ -6,15 +6,7 @@ for file in ~/.dotfiles/.{path,bash_prompt,exports,aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
-# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zplug/init.zsh
@@ -23,12 +15,9 @@ source $HOME/.zplug/init.zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
-zplug "paulmelnikow/zsh-startup-timer"
 zplug "tysonwolker/iterm-tab-colors"
 zplug "desyncr/auto-ls"
 zplug "momo-lab/zsh-abbrev-alias"
-zplug "rawkode/zsh-docker-run"
-zplug "arzzen/calc.plugin.zsh"
 zplug "peterhurford/up.zsh"
 zplug "jimeh/zsh-peco-history"
 zplug romkatv/powerlevel10k, use:powerlevel10k.zsh-theme
