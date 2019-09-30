@@ -29,7 +29,7 @@ Plugin 'bash-support.vim'
 Plugin 'c.vim'
 Plugin 'OmniCppComplete'
 Plugin 'bfrg/vim-cpp-modern'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end()
