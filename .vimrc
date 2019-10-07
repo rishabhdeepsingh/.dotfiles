@@ -22,19 +22,19 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'matchit.zip'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'bash-support.vim'
+Plugin 'tomasr/molokai'
+Plugin 'kaicataldo/material.vim'
 
 " C++
 Plugin 'c.vim'
-Plugin 'OmniCppComplete'
-Plugin 'bfrg/vim-cpp-modern'
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'OmniCppComplete'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'bfrg/vim-cpp-modern'
 
 call vundle#end()
 filetype plugin indent on
-
 
 syntax on
 set tabstop=4
@@ -55,19 +55,20 @@ set shiftround
 set expandtab
 set noswapfile
 
+" Italics in Iterm
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
 
-highlight Comment ctermfg=green
-hi Search ctermfg=Red
-" hi Search ctermbg=DarkBlue
+" 'default' | 'palenight' | 'ocean' | 'lighter' | 'darker'
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'darker'
+colorscheme material
 
-" Set relative numbers
-set number relativenumber
-
-
-" Use one space, not two, after punctuation.
+" e one space, not two, after punctuation.
 set nojoinspaces
 " Numbers
-set number
+set number relativenumber
 set numberwidth=4
 
 " Yank file path with line number
