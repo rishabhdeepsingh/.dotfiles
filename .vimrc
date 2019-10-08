@@ -30,7 +30,6 @@ Plugin 'kaicataldo/material.vim'
 Plugin 'c.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'OmniCppComplete'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'bfrg/vim-cpp-modern'
 
 call vundle#end()
