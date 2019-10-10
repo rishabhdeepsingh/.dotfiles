@@ -34,4 +34,4 @@
 
 ------
 
-## JAVA [Download](https://www.oracle.com/technetwork/java/javase/downloads/index.html)  [Install Help](https://www.javahelps.com/2017/09/install-oracle-jdk-9-on-linux.html)
+## JAVA | [Download](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | [Install Help](https://www.javahelps.com/2017/09/install-oracle-jdk-9-on-linux.html)
