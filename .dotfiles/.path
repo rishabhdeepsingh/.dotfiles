@@ -11,7 +11,10 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   echo "Linux"
 fi
 
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/opt/go/bin
+
 export PATH=$PATH:/opt/anaconda3/bin
 export PATH=$PATH:$HOME/Software/androidsdk/bin
 export PATH=$PATH:$HOME/Software/flutter/bin
