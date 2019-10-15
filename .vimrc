@@ -53,6 +53,7 @@ set smartcase
 set shiftround
 set expandtab
 set noswapfile
+set paste
 
 " Italics in Iterm
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
