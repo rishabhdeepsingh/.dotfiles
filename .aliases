@@ -11,8 +11,8 @@ alias l='ls -CF'
 alias gg='git grep -ni'
 alias :q="exit"
 
-alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+# alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
+# alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
 
 ## Update and remove Outdated packages
 alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
