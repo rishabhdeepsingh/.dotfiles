@@ -5,9 +5,9 @@ export EDITOR='vim'
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
 
-export GOPATH=/opt/go
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export GOROOT=/opt/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin
 
 export PATH=$PATH:/opt/anaconda3/bin
 export PATH=$PATH:$HOME/Software/flutter/bin
