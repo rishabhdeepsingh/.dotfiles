@@ -19,11 +19,15 @@ zplug "tysonwolker/iterm-tab-colors"
 zplug "momo-lab/zsh-abbrev-alias"
 zplug "peterhurford/up.zsh"
 zplug "jimeh/zsh-peco-history"
-zplug romkatv/powerlevel10k, use:powerlevel10k.zsh-theme
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
+# zplug romkatv/powerlevel10k, use:powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 zplug load
+
+autoload -U promptinit; promptinit
+prompt spaceship
