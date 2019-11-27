@@ -13,6 +13,9 @@
 # then uncomment the following line to make Meta + arrow keys mapping work
 # set -ga terminal-overrides "*:kUP3=\e[1;9A,*:kDN3=\e[1;9B,*:kRIT3=\e[1;9C,*:kLFT3=\e[1;9D"
 
+set -g mouse on
+set-option -g default-shell /bin/zsh
+new-session -n $HOST
 
 # -- windows & pane creation ---------------------------------------------------
 
