@@ -7,7 +7,9 @@
     Acquire::http::Pipeline-Depth 0;
 
 ## Basic Needs ,Geany, Terminator, Git, Maven
-    sudo apt-get install git curl maven vim vlc python3-pip terminator geany
+    sudo apt-get install git curl maven vim vlc python3-pip terminator geany exfat-fuse exfat-utils
+
+
 
 ## IDE's
     sudo apt-get install snapd && sudo apt-get install snap
