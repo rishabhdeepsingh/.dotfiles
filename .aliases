@@ -11,8 +11,9 @@ alias l='ls -CF'
 alias gg='git grep -ni'
 alias :q="exit"
 
-alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
 alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
+alias j14="export JAVA_HOME=`/usr/libexec/java_home -v 14`; java -version"
 
 ## Update and remove Outdated packages
 alias update_pip='pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
