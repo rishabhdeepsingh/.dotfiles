@@ -1,6 +1,7 @@
 mkdir ~/.dotfiles
 
-sudo apt-get install git curl maven vim vlc python3-pip terminator geany exfat-fuse exfat-utils exuberant-ctags golang
+sudo apt-get install curl vim vlc terminator geany exfat-fuse exfat-utils exuberant-ctags 
+sudo apt-get install -y golang
 sudo apt-get install -y jq
 sudo apt-get install -y python3-pip
 sudo apt-get install -y python-pip
@@ -34,14 +35,18 @@ echo "installing Sublist3r"
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r*
 pip install -r requirements.txt
-cd ~/tools/
-echo "done"
+cd ~/tools
 
+echo "installing Lazyrecon"
 git clone https://github.com/nahamsec/lazyrecon.git
+
+echo "installing crtndstry"
 git clone https://github.com/nahamsec/crtndstry.git
 
+echo "Installing httprobe waybackurls assetfinder gron aquatone"
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/waybackurls
 go get -u github.com/tomnomnom/assetfinder
 go get -u github.com/tomnomnom/gron
 go get -u github.com/michenriksen/aquatone
+echo "Done"
