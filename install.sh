@@ -1,6 +1,12 @@
 mkdir ~/.dotfiles
 
-sudo apt-get install git curl maven vim vlc python3-pip terminator geany exfat-fuse exfat-utils exuberant-ctags
+sudo apt-get install git curl maven vim vlc python3-pip terminator geany exfat-fuse exfat-utils exuberant-ctags golang
+sudo apt-get install -y jq
+sudo apt-get install -y python3-pip
+sudo apt-get install -y python-pip
+sudo apt-get install -y python-dnspython
+sudo apt-get install -y git
+sudo apt-get install -y nmap
 
 # Tmux
 cd
@@ -20,3 +26,22 @@ curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.vimrc
 
 # Bashrc
 curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.bashrc' -o ~/.bashrc
+
+echo "Installing tools"
+cd ~/tools/
+
+echo "installing Sublist3r"
+git clone https://github.com/aboul3la/Sublist3r.git
+cd Sublist3r*
+pip install -r requirements.txt
+cd ~/tools/
+echo "done"
+
+git clone https://github.com/nahamsec/lazyrecon.git
+git clone https://github.com/nahamsec/crtndstry.git
+
+go get -u github.com/tomnomnom/httprobe
+go get -u github.com/tomnomnom/waybackurls
+go get -u github.com/tomnomnom/assetfinder
+go get -u github.com/tomnomnom/gron
+go get -u github.com/michenriksen/aquatone
