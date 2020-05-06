@@ -1,9 +1,5 @@
-export LANG=en_US.UTF-8
-export EDITOR='vim'
-
 # ZSH setup
 export DOTFILES=$HOME/.dotfiles
-export ZSH=$HOME/.dotfiles/.oh-my-zsh
 
 export GOROOT=/usr/lib/go                                                                                   
 export GOPATH=$HOME/softwares/go                                                                            

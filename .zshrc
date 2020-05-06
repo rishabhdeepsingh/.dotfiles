@@ -1,3 +1,6 @@
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export EDITOR="vim"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.dotfiles/.oh-my-zsh"
 
@@ -21,13 +24,5 @@ zplug "peterhurford/up.zsh"
 zplug "jimeh/zsh-peco-history"
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
-# zplug romkatv/powerlevel10k, use:powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 zplug load
-
 autoload -U promptinit; promptinit
-prompt spaceship
