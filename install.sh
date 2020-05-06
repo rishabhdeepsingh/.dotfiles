@@ -44,6 +44,7 @@ echo "installing crtndstry"
 git clone https://github.com/nahamsec/crtndstry.git
 
 echo "Installing httprobe waybackurls assetfinder gron aquatone"
+go get -u github.com/OJ/gobuster
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/waybackurls
 go get -u github.com/tomnomnom/assetfinder
