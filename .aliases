@@ -11,14 +11,21 @@ alias l='ls -CF'
 alias gg='git grep -ni'
 alias :q="exit"
 
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
-alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
-alias j14="export JAVA_HOME=`/usr/libexec/java_home -v 14`; java -version"
+case "$(uname -s)" in
+  Darwin)
+	alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"
+	alias j12="export JAVA_HOME=`/usr/libexec/java_home -v 12`; java -version"
+	alias j14="export JAVA_HOME=`/usr/libexec/java_home -v 14`; java -version"
+	alias update_brew='brew update && brew upgrade && brew cleanup; brew doctor'
+  ;;
+  Linux)
+	alias update_apt='sudo apt update && sudo apt upgrade'
+  ;;
+	
+esac
 
 ## Update and remove Outdated packages
 alias update_pip='pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U'
-alias update_brew='brew update && brew upgrade && brew cleanup; brew doctor'
-alias update_apt='sudo apt update && sudo apt upgrade'
 
 ## C++ 17
 alias g++='g++ -O2 -std=c++17 -Wno-unused-result -Wshadow -Wall'
