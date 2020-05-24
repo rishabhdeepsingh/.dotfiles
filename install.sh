@@ -36,6 +36,13 @@ git clone https://github.com/nahamsec/lazyrecon.git
 echo "installing crtndstry"
 git clone https://github.com/nahamsec/crtndstry.git
 
+echo "installing massdns"
+git clone https://github.com/blechschmidt/massdns.git
+cd ~/tools/massdns
+make
+cd ~/tools/
+echo "done"
+
 echo "Installing httprobe waybackurls assetfinder gron aquatone unfurl"
 go get -u github.com/OJ/gobuster
 go get -u github.com/tomnomnom/httprobe
