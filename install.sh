@@ -50,4 +50,5 @@ go get -u github.com/tomnomnom/waybackurls
 go get -u github.com/tomnomnom/assetfinder
 go get -u github.com/tomnomnom/gron
 go get -u github.com/michenriksen/aquatone
+go get -u github.com/ffuf/ffuf
 echo "Done"

@@ -9,7 +9,6 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/opt/anaconda3/bin
 export PATH=$PATH:$HOME/Software/flutter/bin
 
-export PATH=$PATH:$HOME/Software/jadx/bin
-
-export PATH=$PATH:$HOME/Software/platform-tools/bin
-export PATH=$PATH:$HOME/Software/androidsdk/bin
+export ANDROID_SDK=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK/platform-tools
+export PATH=$PATH:$ANDROID_SDK/emulator
