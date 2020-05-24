@@ -1,13 +1,6 @@
 mkdir ~/.dotfiles
 
-sudo apt-get install curl vim vlc terminator geany exfat-fuse exfat-utils exuberant-ctags 
-sudo apt-get install -y golang
-sudo apt-get install -y jq
-sudo apt-get install -y python3-pip
-sudo apt-get install -y python-pip
-sudo apt-get install -y python-dnspython
-sudo apt-get install -y git
-sudo apt-get install -y nmap
+sudo apt-get install curl vim vlc terminator geany exfat-fuse exfat-utils exuberant-ctags golang jq python3-pip python-pip python-dnspython git nmap rename 
 
 # Tmux
 cd
@@ -43,7 +36,7 @@ git clone https://github.com/nahamsec/lazyrecon.git
 echo "installing crtndstry"
 git clone https://github.com/nahamsec/crtndstry.git
 
-echo "Installing httprobe waybackurls assetfinder gron aquatone"
+echo "Installing httprobe waybackurls assetfinder gron aquatone unfurl"
 go get -u github.com/OJ/gobuster
 go get -u github.com/tomnomnom/httprobe
 go get -u github.com/tomnomnom/waybackurls
@@ -51,4 +44,5 @@ go get -u github.com/tomnomnom/assetfinder
 go get -u github.com/tomnomnom/gron
 go get -u github.com/michenriksen/aquatone
 go get -u github.com/ffuf/ffuf
+go get -u github.com/tomnomnom/unfurl
 echo "Done"
