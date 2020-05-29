@@ -1,6 +1,6 @@
 mkdir ~/.dotfiles
 
-sudo apt-get install curl vim vlc terminator geany exfat-fuse exfat-utils exuberant-ctags golang jq python3-pip python-pip python-dnspython git nmap rename 
+sudo apt-get install curl vim vlc terminator geany exfat-fuse exfat-utils exuberant-ctags golang jq python3-pip python-dnspython git nmap rename 
 
 # Tmux
 cd
