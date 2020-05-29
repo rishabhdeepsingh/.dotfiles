@@ -23,7 +23,7 @@ new-session -n $HOST
 #   - true
 #   - false (default)
 # set-window-option -g mode-mouse on
-set -g default-terminal "tmux-256color"
+set -g default-terminal "xterm-256color"
 # set -as terminal-overrides ',xterm*:Tc:sitm=\E[3m'
 
 tmux_conf_new_window_retain_current_path=false
