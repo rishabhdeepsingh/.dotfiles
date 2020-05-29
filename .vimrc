@@ -21,7 +21,7 @@ Plugin 'matchit.zip'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'bash-support.vim'
 Plugin 'morhetz/gruvbox'
-Plug 'flazz/vim-colorschemes'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf'
 call vundle#end()
