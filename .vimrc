@@ -22,7 +22,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'bash-support.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'PeterRincker/vim-searchlight'
 Plugin 'junegunn/fzf'
 call vundle#end()
 
@@ -54,8 +54,9 @@ set updatetime=50
 " Give more space for displaying messages.
 set cmdheight=2
 
-colorscheme gruvbox
 set background=dark
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox
 
 " e one space, not two, after punctuation.
 set nojoinspaces
