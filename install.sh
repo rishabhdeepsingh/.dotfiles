@@ -2,7 +2,7 @@ mkdir ~/.dotfiles
 mkdir ~/tools
 mkdir ~/softwares
 
-sudo apt-get install gradle npm curl vim terminator geany exfat-fuse exfat-utils exuberant-ctags golang jq python3-pip git nmap rename
+sudo apt-get install zsh tmux gradle npm curl vim terminator geany exfat-fuse exfat-utils exuberant-ctags golang jq python3-pip git nmap rename
 
 # Tmux
 cd
