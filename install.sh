@@ -23,6 +23,9 @@ curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.vimrc
 # Bashrc
 curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.bashrc' -o ~/.bashrc
 
+# install git alias
+git config --global include.path ~/.dotfiles/gitalias/gitalias.txt
+
 echo "Installing tools"
 cd ~/tools/
 
