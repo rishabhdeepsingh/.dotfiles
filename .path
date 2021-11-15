@@ -4,6 +4,8 @@ export DOTFILES=$HOME/.dotfiles
 # RUBY
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 
+export PATH=$PATH:$HOME/softwares/neovide/target/release
+
 # Golang
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/softwares/go
