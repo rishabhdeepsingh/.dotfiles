@@ -42,3 +42,4 @@ map('n', '<C-x>', ':BufferClose<CR>', opts)
 -- NerdTree
 map('n', '<leader>N', ':NERDTreeToggle<CR>', opts)
 map('n', '<leader>n', ':NERDTreeFocus<CR>', opts)
+

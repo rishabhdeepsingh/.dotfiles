@@ -33,6 +33,7 @@ require('packer').startup(function()
   use 'gruvbox-community/gruvbox'
 	use 'marko-cerovac/material.nvim'
   use 'ryanoasis/vim-devicons'
+	use 'airblade/vim-current-search-match'
 
   use 'preservim/nerdtree'
 	use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
@@ -51,16 +52,18 @@ require('packer').startup(function()
   use { 'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
 
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
+	use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
 
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
 	use 'williamboman/nvim-lsp-installer'
   use 'onsails/lspkind-nvim'
-	use 'hrsh7th/nvim-cmp'
 	use 'saadparwaiz1/cmp_luasnip'
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/vim-vsnip'
-	use 'hrsh7th/vim-vsnip-integ'
 
   -- Languages
   use 'fatih/vim-go'

@@ -1,5 +1,49 @@
 -- luasnip setup
 local luasnip = require 'luasnip'
+local lspkind = require('lspkind')
+
+require('lspkind').init({
+    -- enables text annotations
+    -- default: true
+    with_text = true,
+
+    -- default symbol map
+    -- can be either 'default' (requires nerd-fonts font) or
+    -- 'codicons' for codicon preset (requires vscode-codicons font)
+    --
+    -- default: 'default'
+    preset = 'codicons',
+
+    -- override preset symbols
+    -- default: {}
+    symbol_map = {
+      Text = "",
+      Method = "",
+      Function = "",
+      Constructor = "",
+      Field = "ﰠ",
+      Variable = "",
+      Class = "ﴯ",
+      Interface = "",
+      Module = "",
+      Property = "ﰠ",
+      Unit = "塞",
+      Value = "",
+      Enum = "",
+      Keyword = "",
+      Snippet = "",
+      Color = "",
+      File = "",
+      Reference = "",
+      Folder = "",
+      EnumMember = "",
+      Constant = "",
+      Struct = "פּ",
+      Event = "",
+      Operator = "",
+      TypeParameter = ""
+    },
+})
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
@@ -58,6 +102,7 @@ cmp.setup {
     ghost_text = true,
   },
   sources = {
+    { name = 'buffer' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path' },
@@ -70,3 +115,11 @@ cmp.setup {
     end,
   },
 }
+
+cmp.setup.cmdline(':', {
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  })
+})
