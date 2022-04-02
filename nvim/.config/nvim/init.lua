@@ -58,7 +58,6 @@ require('packer').startup(function()
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
 	use 'williamboman/nvim-lsp-installer'
   use 'onsails/lspkind-nvim'
-	use 'saadparwaiz1/cmp_luasnip'
 	use 'hrsh7th/nvim-cmp'
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-path'
