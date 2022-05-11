@@ -7,7 +7,7 @@ export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 export PATH=$PATH:$HOME/softwares/neovide/target/release
 
 # Golang
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/softwares/go
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
@@ -33,9 +33,9 @@ export PATH=$PATH:$HOME/softwares/flutter/bin/cache/dart-sdk/bin/
 export PATH=$PATH:$HOME/.pub-cache/bin
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 17`
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+#export JAVA_HOME=`/usr/libexec/java_home -v 17`
+#export PATH="/usr/local/opt/openjdk/bin:$PATH"
+#export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 # Android
 export ANDROID_SDK=$HOME/softwares/androidsdk
