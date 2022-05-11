@@ -2,7 +2,7 @@ mkdir ~/.dotfiles
 mkdir ~/tools
 mkdir ~/softwares
 
-sudo apt-get install zsh tmux gradle npm curl vim exuberant-ctags golang jq python3-pip git nmap rename
+sudo apt-get install zsh tmux gradle npm curl vim exuberant-ctags jq python3-pip git nmap rename
 
 # Tmux
 cd
@@ -15,13 +15,6 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.dotfiles/.oh-my-
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.dotfiles/.zsh-syntax-highlighting" --depth 1
 curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.zshrc' -o ~/.zshrc
-
-# Vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.vimrc' -o ~/.vimrc
-
-# Bashrc
-curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.bashrc' -o ~/.bashrc
 
 # install git alias
 git config --global include.path ~/.dotfiles/gitalias/gitalias.txt
@@ -48,6 +41,7 @@ make
 cd ~/tools/
 echo "done"
 
+./go-setup.sh
 echo "Installing httprobe waybackurls assetfinder gron aquatone unfurl"
 go get -u github.com/OJ/gobuster
 go get -u github.com/tomnomnom/httprobe
