@@ -3,6 +3,7 @@ require('whiteknife.lsp_installer')
 require('whiteknife.treesitter')
 require('whiteknife.cmp')
 require('whiteknife.bindings')
+require('whiteknife.gitsigns')
 
 -- Telescope
 require('telescope').setup {

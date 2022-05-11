@@ -5,7 +5,7 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
 end
 
-vim.api.nvim_exec( [[
+vim.api.nvim_exec([[
   augroup Packer
     autocmd!
     autocmd BufWritePost init.lua PackerCompile
@@ -23,45 +23,45 @@ require('packer').startup(function()
   use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
   use 'ludovicchabant/vim-gutentags' -- Automatic tags management
 
-	use 'dstein64/vim-startuptime'
+  use 'dstein64/vim-startuptime'
 
-	use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
-	-- Lua
-	use { "folke/which-key.nvim", config = function() require("which-key").setup{} end }
+  use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
+  -- Lua
+  use { "folke/which-key.nvim", config = function() require("which-key").setup {} end }
 
   -- UI to select things (files, grep results, open buffers...)
   use 'gruvbox-community/gruvbox'
-	use 'marko-cerovac/material.nvim'
+  use 'marko-cerovac/material.nvim'
   use 'ryanoasis/vim-devicons'
-	use 'airblade/vim-current-search-match'
+  use 'airblade/vim-current-search-match'
 
   use 'preservim/nerdtree'
-	use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
+  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
   -- Add indentation guides even on blank lines
   use 'lukas-reineke/indent-blankline.nvim'
   -- Add git related info in the signs columns and popups
-  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} }
+  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 
-	use { 'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'} }
+  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   -- Highlight, edit, and navigate code using a fast incremental parsing library
   use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-treesitter/playground'
   -- Additional textobjects for treesitter
   use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use { 'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
+  use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
 
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
-	use 'saadparwaiz1/cmp_luasnip'
+  use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
 
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
-	use 'williamboman/nvim-lsp-installer'
+  use 'williamboman/nvim-lsp-installer'
   use 'onsails/lspkind-nvim'
-	use 'hrsh7th/nvim-cmp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-path'
-	use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp'
 
   -- Languages
@@ -128,7 +128,7 @@ vim.api.nvim_exec(
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
   augroup end
-]],
+]] ,
   false
 )
 
@@ -139,16 +139,6 @@ vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
 vim.g.indent_blankline_char_highlight = 'LineNr'
 vim.g.indent_blankline_show_trailing_blankline_indent = false
 
--- Gitsigns
-require('gitsigns').setup {
-  signs = {
-    add = { hl = 'GitGutterAdd', text = '+' },
-    change = { hl = 'GitGutterChange', text = '~' },
-    delete = { hl = 'GitGutterDelete', text = '_' },
-    topdelete = { hl = 'GitGutterDelete', text = '‾' },
-    changedelete = { hl = 'GitGutterChange', text = '~' },
-  },
-}
 
 require('theme')
 require('whiteknife')
