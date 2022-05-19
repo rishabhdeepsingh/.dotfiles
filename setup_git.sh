@@ -15,5 +15,5 @@ echo "unstage the added changes [usage: git unstage]"
 git config --global alias.unstage "reset HEAD --"
 
 echo "git hist"
-git config --global alias.hist "log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short"
+git config --global alias.hist 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 
