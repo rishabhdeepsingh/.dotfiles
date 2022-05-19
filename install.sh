@@ -41,7 +41,8 @@ make
 cd ~/tools/
 echo "done"
 
-./go-setup.sh
+./setup_go.sh
+./setup_git.sh
 echo "Installing httprobe waybackurls assetfinder gron aquatone unfurl"
 go get -u github.com/OJ/gobuster
 go get -u github.com/tomnomnom/httprobe
