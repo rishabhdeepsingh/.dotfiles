@@ -31,7 +31,6 @@ require('packer').startup(function()
 
   -- UI to select things (files, grep results, open buffers...)
   use 'gruvbox-community/gruvbox'
-  use 'marko-cerovac/material.nvim'
   use 'ryanoasis/vim-devicons'
   use 'airblade/vim-current-search-match'
   use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }

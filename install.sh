@@ -53,3 +53,4 @@ go get -u github.com/michenriksen/aquatone
 go get -u github.com/ffuf/ffuf
 go get -u github.com/tomnomnom/unfurl
 echo "Done"
+
