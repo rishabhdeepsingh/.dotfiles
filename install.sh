@@ -19,6 +19,9 @@ curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.zshrc
 # install git alias
 git config --global include.path ~/.dotfiles/gitalias/gitalias.txt
 
+# Neovim setup
+ln -sv ~/.dotfiles/nvim/.config/nvim/ ~/.config/nvim
+
 echo "Installing tools"
 cd ~/tools/
 
