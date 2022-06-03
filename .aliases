@@ -1,3 +1,4 @@
+alias plz="$HOME/.please/bin/plz"
 alias pmd="$HOME/pmd-bin-6.30.0/bin/run.sh pmd"
 
 # enable color support of ls and also add handy aliases
@@ -12,7 +13,7 @@ alias l='ls -CF'
 alias gg='git grep -ni'
 alias :q="exit"
 alias lc="colorls"
-alias vim="nvim"
+alias vim="~/softwares/neovim/bin/nvim"
 
 
 alias ghidraRun='/Users/whiteknife/softwares/ghidra_9.1.2_PUBLIC/ghidraRun'
