@@ -15,8 +15,8 @@ alias :q="exit"
 alias lc="colorls"
 alias vim="~/softwares/neovim/bin/nvim"
 
-
-alias ghidraRun='/Users/whiteknife/softwares/ghidra_9.1.2_PUBLIC/ghidraRun'
+alias vcpk='$HOME/vcpk/vcpk'
+alias ghidraRun='$HOME/softwares/ghidra/ghidraRun'
 
 case "$(uname -s)" in
   Darwin)
