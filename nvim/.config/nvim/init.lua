@@ -30,7 +30,7 @@ require('packer').startup(function()
   use { "folke/which-key.nvim", config = function() require("which-key").setup {} end }
 
   -- UI to select things (files, grep results, open buffers...)
-  use 'gruvbox-community/gruvbox'
+	use { "catppuccin/nvim", as = "catppuccin-latte" }
   use 'ryanoasis/vim-devicons'
   use 'airblade/vim-current-search-match'
   use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
