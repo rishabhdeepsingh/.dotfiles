@@ -46,14 +46,6 @@ echo "done"
 
 ./setup_go.sh
 ./setup_git.sh
-echo "Installing httprobe waybackurls assetfinder gron aquatone unfurl"
-go get -u github.com/OJ/gobuster
-go get -u github.com/tomnomnom/httprobe
-go get -u github.com/tomnomnom/waybackurls
-go get -u github.com/tomnomnom/assetfinder
-go get -u github.com/tomnomnom/gron
-go get -u github.com/michenriksen/aquatone
-go get -u github.com/ffuf/ffuf
-go get -u github.com/tomnomnom/unfurl
-echo "Done"
+
+echo "Setup completed"
 

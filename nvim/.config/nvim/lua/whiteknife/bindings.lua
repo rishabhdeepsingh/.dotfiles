@@ -9,8 +9,8 @@ map('n', '<C-_>', ':Commentary<CR>', opts)
 
 -- Set barbar's options
 vim.g.bufferline = {
-  auto_hide = false,
-  -- Configure icons on the bufferline.
+	auto_hide = false,
+	-- Configure icons on the bufferline.
   icon_separator_active = '▎',
   icon_separator_inactive = '▎',
   icon_close_tab = '',

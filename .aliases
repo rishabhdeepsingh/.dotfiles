@@ -1,6 +1,8 @@
 alias plz="$HOME/.please/bin/plz"
 alias pmd="$HOME/pmd-bin-6.30.0/bin/run.sh pmd"
 
+alias t3mux="tmux attach || tmux new-session\; new-window\; new-window"
+
 # enable color support of ls and also add handy aliases
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'

@@ -1,73 +1,75 @@
--- Install packer
-local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
-
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
+-- Install Lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-vim.api.nvim_exec([[
-  augroup Packer
-    autocmd!
-    autocmd BufWritePost init.lua PackerCompile
-  augroup end
-]],
-  false
-)
--- autocmd VimEnter * NERDTree
+require('lazy').setup({
+  'tpope/vim-fugitive', -- Git commands in nvim
+  'tpope/vim-rhubarb', -- Fugitive-companion to interact with github
+  'tpope/vim-commentary', -- "gc" to comment visual regions/lines
+  'ludovicchabant/vim-gutentags', -- Automatic tags management
+   -- require('whiteknife.vim-gutentags'),
 
-local use = require('packer').use
-require('packer').startup(function()
-  use 'wbthomason/packer.nvim' -- Package manager
-  use 'tpope/vim-fugitive' -- Git commands in nvim
-  use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github
-  use 'tpope/vim-commentary' -- "gc" to comment visual regions/lines
-  use 'ludovicchabant/vim-gutentags' -- Automatic tags management
+  'dstein64/vim-startuptime',
 
-  use 'dstein64/vim-startuptime'
-
-  use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
+  { 'numToStr/Comment.nvim', lazy = false},
   -- Lua
-  use { "folke/which-key.nvim", config = function() require("which-key").setup {} end }
+  { 
+		"folke/which-key.nvim", event = "VeryLazy", 
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+    end
+	},
 
   -- UI to select things (files, grep results, open buffers...)
-	use { "catppuccin/nvim", as = "catppuccin-latte" }
-  use 'ryanoasis/vim-devicons'
-  use 'airblade/vim-current-search-match'
-  use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
-  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  'ryanoasis/vim-devicons',
+  'airblade/vim-current-search-match',
+  { 'romgrk/barbar.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
+  { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
 
-  use 'preservim/nerdtree'
+  'preservim/nerdtree',
 
   -- Add indentation guides even on blank lines
-  use 'lukas-reineke/indent-blankline.nvim'
+  'lukas-reineke/indent-blankline.nvim',
 
   -- Add git related info in the signs columns and popups
-  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  { 'lewis6991/gitsigns.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'nvim-telescope/telescope.nvim', tag='0.1.2', dependencies = { 'nvim-lua/plenary.nvim' } },
 
   -- Highlight, edit, and navigate code using a fast incremental parsing library
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'nvim-treesitter/playground'
+  'nvim-treesitter/nvim-treesitter',
+  'nvim-treesitter/playground',
 
   -- Additional textobjects for treesitter
-  use 'nvim-treesitter/nvim-treesitter-textobjects'
+  'nvim-treesitter/nvim-treesitter-textobjects',
 
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'rafamadriz/friendly-snippets'
+  'L3MON4D3/LuaSnip', -- Snippets plugin
+  'saadparwaiz1/cmp_luasnip',
+  'rafamadriz/friendly-snippets',
 
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
-  use 'williamboman/nvim-lsp-installer'
-  use 'onsails/lspkind-nvim'
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-nvim-lsp'
+  'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client
+  'williamboman/nvim-lsp-installer',
+  'onsails/lspkind-nvim',
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-cmdline',
+  'hrsh7th/cmp-nvim-lsp',
 
   -- Languages
-  use 'fatih/vim-go'
-end)
+  'fatih/vim-go',
+})
 
 vim.api.encoding = "UTF-8"
 vim.g.webdevicons_enable = true
@@ -137,8 +139,3 @@ vim.g.indent_blankline_show_trailing_blankline_indent = false
 require('theme')
 require('whiteknife')
 
-
--- Make runtime files discoverable to the server
--- local runtime_path = vim.split(package.path, ';')
--- table.insert(runtime_path, 'lua/?.lua')
--- table.insert(runtime_path, 'lua/?/init.lua')
