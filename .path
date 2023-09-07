@@ -1,6 +1,8 @@
 # ZSH setup
 export DOTFILES=$HOME/.dotfiles
 
+export PATH=$PATH:$HOME/.local/bin
+
 # RUBY
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 
