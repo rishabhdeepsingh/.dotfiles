@@ -1,4 +1,5 @@
 -- Telescope
+local builtin = require('telescope.builtin')
 require('telescope').setup {
   defaults = {
     mappings = {
@@ -10,13 +11,23 @@ require('telescope').setup {
   },
 }
 
-vim.api.nvim_set_keymap('n', '<leader><space>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>sf', [[<cmd>lua require('telescope.builtin').find_files({previewer = false})<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>sb', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>sh', [[<cmd>lua require('telescope.builtin').help_tags()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>st', [[<cmd>lua require('telescope.builtin').tags()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>sg', [[<cmd>lua require('telescope.builtin').grep_string()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>sp', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>so', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<CR>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<leader>?', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], { noremap = true, silent = true })
+vim.keymap.set('n', '<leader><space>', builtin.buffers, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>sb', builtin.current_buffer_fuzzy_find, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>sh', builtin.help_tags, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>st', builtin.tags, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>sg', builtin.grep_string, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>sp', builtin.live_grep, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>?', builtin.oldfiles, { noremap = true, silent = true })
 
+vim.keymap.set('n', '<leader>so', function()
+  builtin.tags { only_current_buffer = true }
+end, { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>sf', function()
+  builtin.find_files({ previewer = false })
+end, { noremap = true, silent = true })
+
+
+vim.keymap.set('n', '<leader>ps', function()
+  builtin.grep_string({ search = vim.fn.input("Grep > ") });
+end)

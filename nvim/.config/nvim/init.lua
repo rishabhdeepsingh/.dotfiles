@@ -13,29 +13,30 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  'tpope/vim-fugitive', -- Git commands in nvim
-  'tpope/vim-rhubarb', -- Fugitive-companion to interact with github
-  'tpope/vim-commentary', -- "gc" to comment visual regions/lines
+  'mbbill/undotree',
+  'tpope/vim-fugitive',           -- Git commands in nvim
+  'tpope/vim-rhubarb',            -- Fugitive-companion to interact with github
+  'tpope/vim-commentary',         -- "gc" to comment visual regions/lines
   'ludovicchabant/vim-gutentags', -- Automatic tags management
-   -- require('whiteknife.vim-gutentags'),
 
   'dstein64/vim-startuptime',
 
-  { 'numToStr/Comment.nvim', lazy = false},
+  { 'numToStr/Comment.nvim', lazy = false },
   -- Lua
-  { 
-		"folke/which-key.nvim", event = "VeryLazy", 
-		init = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 300
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
     end
-	},
+  },
 
   -- UI to select things (files, grep results, open buffers...)
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",       name = "catppuccin", priority = 1000 },
   'ryanoasis/vim-devicons',
   'airblade/vim-current-search-match',
-  { 'romgrk/barbar.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
+  { 'romgrk/barbar.nvim',        dependencies = { 'nvim-tree/nvim-web-devicons' } },
   { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
 
   'preservim/nerdtree',
@@ -45,27 +46,36 @@ require('lazy').setup({
 
   -- Add git related info in the signs columns and popups
   { 'lewis6991/gitsigns.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-  { 'nvim-telescope/telescope.nvim', tag='0.1.2', dependencies = { 'nvim-lua/plenary.nvim' } },
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.2',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
 
   -- Highlight, edit, and navigate code using a fast incremental parsing library
   'nvim-treesitter/nvim-treesitter',
   'nvim-treesitter/playground',
-
   -- Additional textobjects for treesitter
   'nvim-treesitter/nvim-treesitter-textobjects',
 
-  'L3MON4D3/LuaSnip', -- Snippets plugin
-  'saadparwaiz1/cmp_luasnip',
-  'rafamadriz/friendly-snippets',
+  {
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!).
+    build = "make install_jsregexp",
+    dependencies = { "saadparwaiz1/cmp_luasnip", "rafamadriz/friendly-snippets" }
+  },
 
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
   'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client
-  'williamboman/nvim-lsp-installer',
-  'onsails/lspkind-nvim',
+  'hrsh7th/cmp-nvim-lsp',
+  'onsails/lspkind-nvim',  -- vscode-like pictograms to neovim built-in lsp
   'hrsh7th/nvim-cmp',
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
-  'hrsh7th/cmp-nvim-lsp',
 
   -- Languages
   'fatih/vim-go',
@@ -112,6 +122,8 @@ vim.wo.signcolumn = 'yes'
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
+vim.opt.scrolloff = 8
+
 --Remap space as leader key
 vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
@@ -124,7 +136,7 @@ vim.api.nvim_exec(
     autocmd!
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
   augroup end
-]] ,
+]],
   false
 )
 
@@ -138,4 +150,3 @@ vim.g.indent_blankline_show_trailing_blankline_indent = false
 
 require('theme')
 require('whiteknife')
-

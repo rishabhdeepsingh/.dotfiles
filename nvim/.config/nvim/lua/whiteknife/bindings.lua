@@ -1,3 +1,4 @@
+local builtin = require('telescope.builtin')
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = false }
 
@@ -9,8 +10,8 @@ map('n', '<C-_>', ':Commentary<CR>', opts)
 
 -- Set barbar's options
 vim.g.bufferline = {
-	auto_hide = false,
-	-- Configure icons on the bufferline.
+  auto_hide = false,
+  -- Configure icons on the bufferline.
   icon_separator_active = '▎',
   icon_separator_inactive = '▎',
   icon_close_tab = '',
@@ -43,15 +44,11 @@ map('n', '<C-x>', ':BufferClose<CR>', opts)
 map('n', '<leader>N', ':NERDTreeToggle<CR>', opts)
 map('n', '<leader>n', ':NERDTreeFocus<CR>', opts)
 
-
--- telescope
-map('n', '<leader><space>', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], { noremap = true, silent = true })
-map('n', '<leader>sf', [[<cmd>lua require('telescope.builtin').find_files({previewer = false})<CR>]], opts)
-map('n', '<leader>sb', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]], opts)
-map('n', '<leader>sh', [[<cmd>lua require('telescope.builtin').help_tags()<CR>]], opts)
-map('n', '<leader>st', [[<cmd>lua require('telescope.builtin').tags()<CR>]], opts)
-map('n', '<leader>sg', [[<cmd>lua require('telescope.builtin').grep_string()<CR>]], opts)
-map('n', '<leader>sp', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]], opts)
-map('n', '<leader>so', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<CR>]], opts)
-map('n', '<leader>?', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]], opts)
-
+vim.keymap.set('v', "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set('n', "<C-d>", "<C-d>zz")
+vim.keymap.set('n', "<C-u>", "<C-u>zz")
+vim.keymap.set('n', "n", "nzzzv")
+vim.keymap.set('n', "N", "Nzzzv")
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })

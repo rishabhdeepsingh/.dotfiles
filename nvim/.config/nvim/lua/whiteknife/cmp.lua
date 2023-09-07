@@ -1,5 +1,5 @@
 -- luasnip setup
-local luasnip = require 'luasnip'
+local luasnip = require('luasnip')
 
 require('lspkind').init({
   -- enables text annotations
@@ -95,9 +95,6 @@ cmp.setup {
     end,
   },
   window = { documentation = cmp.config.window.bordered() },
-  -- documentation = {
-  -- border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  -- },
   experimental = {
     ghost_text = true,
   },
