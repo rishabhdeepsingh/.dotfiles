@@ -5,7 +5,7 @@ export EDITOR="vim"
 export ZSH="$HOME/.dotfiles/.oh-my-zsh"
 
 # Load the shell dotfiles, and then some:
-for file in ~/.dotfiles/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.dotfiles/.{path,bash_prompt,exports,aliases,functions,extra,google}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
@@ -22,6 +22,8 @@ zplug "tysonwolker/iterm-tab-colors"
 zplug "momo-lab/zsh-abbrev-alias"
 zplug "peterhurford/up.zsh"
 zplug "jimeh/zsh-peco-history"
+zplug "catppuccin/zsh-syntax-highlighting"
+# Spaceship setup
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 zplug load
@@ -30,3 +32,4 @@ autoload -U promptinit; promptinit
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+

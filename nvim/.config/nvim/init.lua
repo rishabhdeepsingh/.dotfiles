@@ -66,7 +66,6 @@ require('lazy').setup({
     build = "make install_jsregexp",
     dependencies = { "saadparwaiz1/cmp_luasnip", "rafamadriz/friendly-snippets" }
   },
-
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
   'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client

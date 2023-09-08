@@ -2,4 +2,5 @@
 .zsh-syntax-highlighting
 tags*
 nvim/.config/nvim/lazy-lock.json
+.google
 
