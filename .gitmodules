@@ -1,4 +1,0 @@
-[submodule "gitalias"]
-	path = gitalias
-	url = git@github.com:GitAlias/gitalias.git
-	ignore = dirty
