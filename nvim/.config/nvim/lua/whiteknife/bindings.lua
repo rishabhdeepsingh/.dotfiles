@@ -24,7 +24,7 @@ map('n', '<leader>,', ':BufferPrevious<CR>', opts)
 map('n', '<leader>.', ':BufferNext<CR>', opts)
 -- Re-order to previous/next
 map('n', '<leader><', ':BufferMovePrevious<CR>', opts)
-map('n', '<leader>>', ' :BufferMoveNext<CR>', opts)
+map('n', '<leader>>', ':BufferMoveNext<CR>', opts)
 -- Goto buffr in position...
 map('n', '<leader>1', ':BufferGoto 1<CR>', opts)
 map('n', '<leader>2', ':BufferGoto 2<CR>', opts)

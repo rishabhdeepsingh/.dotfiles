@@ -78,7 +78,23 @@ require('lazy').setup({
 
   -- Languages
   'fatih/vim-go',
-})
+}, {
+	ui = {
+    icons = {
+      cmd = "⌘",
+      config = "🛠",
+      event = "📅",
+      ft = "📂",
+      init = "⚙",
+      keys = "🗝",
+      plugin = "🔌",
+      runtime = "💻",
+      source = "📄",
+      start = "🚀",
+      task = "📌",
+    }
+	}}
+)
 
 vim.api.encoding = "UTF-8"
 vim.g.webdevicons_enable = true
@@ -97,6 +113,7 @@ vim.o.shiftwidth = 2
 --Make line numbers default
 vim.wo.number = true
 vim.wo.relativenumber = true
+vim.wo.cursorline = true
 
 --Do not save when switching buffers (note: this is now a default on master)
 vim.o.hidden = true
@@ -140,7 +157,7 @@ vim.api.nvim_exec(
 )
 
 --Map blankline
-vim.g.indent_blankline_char = '┊'
+-- vim.g.indent_blankline_char = '┊'
 vim.g.indent_blankline_filetype_exclude = { 'help', 'packer' }
 vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
 vim.g.indent_blankline_char_highlight = 'LineNr'
