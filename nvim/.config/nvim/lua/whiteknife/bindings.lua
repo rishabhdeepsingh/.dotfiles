@@ -44,6 +44,19 @@ map('n', '<C-x>', ':BufferClose<CR>', opts)
 map('n', '<leader>N', ':NERDTreeToggle<CR>', opts)
 map('n', '<leader>n', ':NERDTreeFocus<CR>', opts)
 
+local arena = require('arena')
+
+function arena_open()
+	arena.toggle()
+end
+
+-- Saga
+vim.keymap.set('n', 'K', '<cmd>Lspsaga hover_doc')
+
+
+
+vim.keymap.set('n', "<C-Tab>", arena_open)
+vim.keymap.set('n', "<esc>", ":noh<return><esc>")
 vim.keymap.set('v', "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set('n', "<C-d>", "<C-d>zz")

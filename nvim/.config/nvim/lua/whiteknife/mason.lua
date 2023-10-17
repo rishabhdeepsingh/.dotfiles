@@ -1,8 +1,11 @@
+---@diagnostic disable: undefined-global
+local nvim_lspconfig = require("lspconfig")
+
 require("mason").setup()
 require("mason-lspconfig").setup {
     ensure_installed = {
         -- LSPs
-        "bashls", "clangd", "lua_ls", "pyright", "lua_ls", "rust_analyzer"
+        "bashls", "clangd", "pyright", "lua_ls", "rust_analyzer"
         -- Linters
         -- "cmakelint", "buf", "cpplint",
         -- formatters
@@ -13,11 +16,7 @@ require("mason-lspconfig").setup {
 }
 
 local on_attach = function(_, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-    buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+    vim.api.nvim_buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
     local opts = { buffer = bufnr, remap = false }
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
@@ -47,15 +46,14 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-require("lspconfig")["pyright"].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-})
+SERVERS = { "pyright", "lua_ls", "clangd", "rust_analyzer" }
 
-require("lspconfig")["cssls"].setup({
+for _, server in ipairs(SERVERS) do
+	nvim_lspconfig[server].setup({
     on_attach = on_attach,
     capabilities = capabilities,
-})
+	})
+end
 
 require("lspconfig")["clangd"].setup({
     on_attach = on_attach,

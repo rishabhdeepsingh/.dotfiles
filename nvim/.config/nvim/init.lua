@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- Install Lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -13,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+	{ "dzfrias/arena.nvim", event = "BufWinEnter", config = true },
   'mbbill/undotree',
   'tpope/vim-fugitive',           -- Git commands in nvim
   'tpope/vim-rhubarb',            -- Fugitive-companion to interact with github
@@ -33,7 +35,7 @@ require('lazy').setup({
   },
 
   -- UI to select things (files, grep results, open buffers...)
-  { "catppuccin/nvim",       name = "catppuccin", priority = 1000 },
+  { "catppuccin/nvim",  name = "catppuccin", priority = 1000 },
   'ryanoasis/vim-devicons',
   'airblade/vim-current-search-match',
   { 'romgrk/barbar.nvim',        dependencies = { 'nvim-tree/nvim-web-devicons' } },
@@ -42,7 +44,7 @@ require('lazy').setup({
   'preservim/nerdtree',
 
   -- Add indentation guides even on blank lines
-  'lukas-reineke/indent-blankline.nvim',
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   -- Add git related info in the signs columns and popups
   { 'lewis6991/gitsigns.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
@@ -51,13 +53,11 @@ require('lazy').setup({
     tag = '0.1.2',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-
   -- Highlight, edit, and navigate code using a fast incremental parsing library
   'nvim-treesitter/nvim-treesitter',
   'nvim-treesitter/playground',
   -- Additional textobjects for treesitter
   'nvim-treesitter/nvim-treesitter-textobjects',
-
   {
     "L3MON4D3/LuaSnip",
     -- follow latest release.
@@ -66,6 +66,13 @@ require('lazy').setup({
     build = "make install_jsregexp",
     dependencies = { "saadparwaiz1/cmp_luasnip", "rafamadriz/friendly-snippets" }
   },
+  {
+    'nvimdev/lspsaga.nvim',
+    dependencies = {
+        'nvim-treesitter/nvim-treesitter', -- optional
+        'nvim-tree/nvim-web-devicons'     -- optional
+    }
+},
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
   'neovim/nvim-lspconfig', -- Collection of configurations for built-in LSP client
@@ -75,7 +82,6 @@ require('lazy').setup({
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
   'hrsh7th/cmp-cmdline',
-
   -- Languages
   'fatih/vim-go',
 }, {
@@ -93,8 +99,8 @@ require('lazy').setup({
       start = "🚀",
       task = "📌",
     }
-	}}
-)
+	}
+})
 
 vim.api.encoding = "UTF-8"
 vim.g.webdevicons_enable = true
@@ -106,9 +112,10 @@ vim.o.inccommand = 'nosplit'
 vim.o.syntax = "on"
 vim.o.hlsearch = true
 
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
-
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.bo.softtabstop = 2
 
 --Make line numbers default
 vim.wo.number = true
@@ -155,13 +162,6 @@ vim.api.nvim_exec(
 ]],
   false
 )
-
---Map blankline
--- vim.g.indent_blankline_char = '┊'
-vim.g.indent_blankline_filetype_exclude = { 'help', 'packer' }
-vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
-vim.g.indent_blankline_char_highlight = 'LineNr'
-vim.g.indent_blankline_show_trailing_blankline_indent = false
 
 
 require('theme')
