@@ -1,7 +1,7 @@
 #!/bin/bash
 # https://github.com/tomnomnom/dotfiles/blob/master/go-setup.sh
 # Dirty dirty dirty
-VERSION="1.21.0"
+VERSION="1.22.3"
 
 wget https://storage.googleapis.com/golang/go$VERSION.linux-amd64.tar.gz
 tar xvfz go$VERSION.linux-amd64.tar.gz
