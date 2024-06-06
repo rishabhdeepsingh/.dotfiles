@@ -1,5 +1,6 @@
 alias plz="$HOME/.please/bin/plz"
 alias pmd="$HOME/pmd-bin-6.30.0/bin/run.sh pmd"
+alias john="$HOME/tools/john/run/john"
 
 alias t3mux="tmux attach || tmux new-session\; new-window\; new-window"
 
