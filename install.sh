@@ -5,10 +5,7 @@ mkdir ~/softwares
 sudo apt-get install zsh tmux gradle npm curl vim exuberant-ctags jq python3-pip git nmap rename
 
 # Tmux
-cd
-git clone https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf
-curl 'https://raw.githubusercontent.com/rishabhdeepsingh/.dotfiles/master/.tmux.conf.local' -o ~/.tmux.conf.local
+ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
 # Zsh
 git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.dotfiles/.oh-my-zsh"

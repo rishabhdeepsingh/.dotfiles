@@ -163,6 +163,7 @@ vim.api.nvim_exec(
   false
 )
 
-
+-- Install other modules
 require('theme')
 require('whiteknife')
+
