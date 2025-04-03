@@ -3,10 +3,12 @@ cd $HOME/softwares
 
 sudo rm -rf $HOME/softwares/neovim/
 
-wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
-tar xvfz nvim-linux64.tar.gz
-sudo mv nvim-linux64 $HOME/softwares/neovim/
+VERSION=nvim-linux-x86_64
 
-rm nvim-linux64.tar.gz
+wget https://github.com/neovim/neovim/releases/latest/download/$VERSION.tar.gz
+tar xvfz $VERSION.tar.gz
+sudo mv $VERSION $HOME/softwares/neovim/
+
+rm $VERSION.tar.gz
 
 cd ~/.dotfiles
